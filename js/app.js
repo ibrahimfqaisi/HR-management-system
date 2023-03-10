@@ -59,7 +59,7 @@ Employee.prototype.nameAndSalary = function() {
   card.appendChild(infoE3)
 };
 
-let cards = document.querySelectorAll(".employee-card");
+
 
 
   let ghaziSamer = new Employee(1000,'ghaziSamer','Administration','Senior',"https://github.com/LTUC/amman-prep-d10/blob/main/Class-08/lab/assets/Ghazi.jpg?raw=true" );
@@ -83,9 +83,7 @@ let theLevle = event.target.level.value;
 counter++;
 let newInfo = new Employee(counter,theName,theDepartment,theLevle,thePhoto)
 
-function generateUniqueID() {
-  counter++;
-}
+
 
 newInfo.nameAndSalary();
 

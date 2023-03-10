@@ -2,7 +2,7 @@
     font-family: 'Righteous', cursive;
 }
 body {
-    background-color: rgb(187, 174, 227);
+    background-color: rgb(208, 199, 234);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -49,9 +49,62 @@ nav ul {
         font-family: 'Righteous', cursive;
       
         color: #040421;
-        font-size: 30px;
-     padding-top: 1%;
+        font-size: 1rem;
+     padding-top: 15%;
      }
+#main{
+    display: flex;
+    
+}
+
+
+#card{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+
+}
+.employee-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 350px;
+    padding: 20px;
+    background-color: rgb(46, 72, 201);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 20px;
+  }
+  #the-end{
+    display: flex;
+        justify-content:space-around;
+
+
+  }
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 250px;
+    height: 350px;
+    padding: 20px;
+    
+    
+
+}
+  #card img {
+    width: 80%;
+    margin-bottom: 20px;}
+    #card p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+  
      footer{
         display: flex;
         justify-content: space-between;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,16 @@
     <link rel="stylesheet" href="./css/Reset.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
     <header>
         <section id="navigating">
-            <img src="https://www.shutterstock.com/image-vector/hr-department-human-resources-management-260nw-2076429778.jpg" alt="logo" id="logo1">
+            <img src="https://www.shutterstock.com/image-vector/hr-department-human-resources-management-260nw-2076429778.jpg"
+                alt="logo" id="logo1">
         </section>
+        <section>
         <h3 id="HR-management-system">HR management system</h3>
+       </section>
         <section>
             <nav>
                 <ul>
@@ -26,7 +31,41 @@
     </header>
 
     <main>
-        <script src="./js/app.js"></script>
+        <div id="card">
+
+
+        </div>
+        <section id="the-end">
+            <form id="form">
+
+
+                <label for="fullname">Drink name:</label><br>
+                <input type="text" id="fullname" value=""><br>
+
+                <label for="img">img URL :</label><br>
+                <input type="text" id="img" value=""><br>
+
+                <label for="Department">Choose your Department:</label><br>
+
+                <select name="Department" id="Department ">
+                    <option value="administration">Administration</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="development">Development</option>
+                    <option value="finance">Finance</option>
+                </select><br>
+
+                <label for="Level">Choose a car:</label> <br>
+
+                <select name="level" id="level">
+                    <option value="Junior">Junior</option>
+                    <option value="midSenior">midSenior</option>
+                    <option value="senior">Senior</option>
+                </select> <br>
+
+                <input type="submit" value="Submit">
+
+        </section>
+        </form>
 
 
 
@@ -34,7 +73,9 @@
 
     <footer>
         <section>
-            <img id="logo2" src="https://www.shutterstock.com/image-vector/hr-department-human-resources-management-260nw-2076429778.jpg"  alt="logo">
+            <img id="logo2"
+                src="https://www.shutterstock.com/image-vector/hr-department-human-resources-management-260nw-2076429778.jpg"
+                alt="logo">
         </section>
         <section>
             <p id="copy"> &copy; 2023. All Rights Reserves </p>
@@ -43,7 +84,9 @@
         <section>
             <p id="follow"> follow us</p>
         </section>
-        
+
     </footer>
+    <script src="./js/app.js"></script>
 </body>
+
 </html>

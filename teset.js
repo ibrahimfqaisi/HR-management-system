@@ -3,6 +3,7 @@
 const allDrinks = [];
 let sectionEl = document.getElementById("sec")
 let form = document.getElementById("form");
+let tableEL = document.getElementById("table");
 //constructor
 function Drink(name, ingredients, image, cold, hot, price) {
   this.name = name;
@@ -32,13 +33,31 @@ Drink.prototype.render = function () {
     liEl.textContent = this.ingredients[i];
     ulEl.appendChild(liEl);
   }
-    
+
 
      
-}    
+}  
+Drink.prototype.renderTable= function(){
+
+  let trEL = document.createElement('tr');
+  tableEL.appendChild(trEL);
+
+  let tdEl = document.createElement('td');
+  tdEl.textContent=this.name;
+  trEL.appendChild(tdEl);
+
+  let tdEl2 = document.createElement('td');
+  tdEl2.textContent=this.price;
+  trEL.appendChild(tdEl2);
+
+
+
+    
+}
+
   
 const mocha = new Drink("Mocha",["coffee", "milk", "sugar"],"../assets/mocha.png",true,false,5);
-const latte = new Drink( "Latte",["coffee","milk","sugar","espresso"],"../assets/latte.png",true,1);
+const latte = new Drink( "Latte",["coffee","milk","sugar","espresso"],"../assets/latte.png",true,true,1);
 const americano = new Drink(
   "americano",
   ["americano", "milk", "sugar"],
@@ -74,13 +93,57 @@ function submitHandler(event) {
   let newDrink = new Drink(drinkName, ingredientsArr, img, isCold, isHot);
 
   newDrink.render();
+  saveData(allDrinks);
 
 
 }
-this.employee_ID = employee_ID;
-    this.fullName = fullName;
-    this.department = department;
-    this.level = level;
-    this.image_URL = image_URL;
-    this.salary =0;
-    allName.push(this);
+
+
+
+
+function renderAll(){
+  for (let i = 0;i< allDrinks.length; i++){
+    allDrinks[i].render();
+    allDrinks[i].renderTable()
+    }
+}
+
+
+function saveData(data){
+  let stringArr= JSON.stringify(data);
+  localStorage.setItem('drinks', stringArr);
+}
+console.log("before saving in LS", allDrinks[-1])
+
+function getData(){
+  let retrievedArr = localStorage.getItem('drinks');
+  // console.log(retrievedArr) //string
+  let objArray = JSON.parse(retrievedArr);
+  console.log("after getting from LS ",objArray) // array of objects
+
+  //re-instantiation of new Instances
+  if(objArray != null){
+
+    for (let i = 0; i < objArray.length; i++) {
+      new Drink(objArray[i].name, objArray[i].ingredients, objArray[i].image, objArray[i].cold, objArray[i].hot, objArray[i].price)
+      
+    }
+  }
+
+  renderAll();
+
+  
+}
+
+
+
+getData();
+
+
+// americano.render();
+// mocha.render();
+// latte.render();
+
+//1. save allDrinks array in LS
+//2. get allDrinks Array from LS
+//3. call the render method for the objects inside allDrinks Array 

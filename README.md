@@ -9,5 +9,4 @@ Header for navigating to any other pages and Footer have  copyright.
 
  i did refactor the render prototype function to render each employee information in a separate card in the home page
 
- Save all the employees in the Local Storage so when I refresh the page I will not lose my old data.
- Render  department information in a table.
+ i Saved all the employees in the Local Storage farthermore i Create a new js file called accounting.js to use it in this page andi  department information in a table.
